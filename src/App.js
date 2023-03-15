@@ -33,9 +33,14 @@ const App = () => {
 
 	// )
 
+	const addExpenseHandler = expense => {  // tutaj do parametru trafia expenseDatara z NewExpense
+		console.log('in app js')
+		console.log(expense)
+	}
+
 	return (
 		<div>
-			<NewExpense />
+			<NewExpense onAddExpense={addExpenseHandler} />
 			<Expenses items={expenses} />
 		</div>
 	)
