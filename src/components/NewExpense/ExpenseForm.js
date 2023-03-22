@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './ExpenseForm.css'
 
-const ExpenseForm = (props) => {
+const ExpenseForm = props => {
 	const [enteredTitle, setEnteredTitle] = useState('')
 	const [enteredAmount, setEnteredAmount] = useState('')
 	const [enteredDate, setEnteredDate] = useState('')
@@ -35,15 +35,15 @@ const ExpenseForm = (props) => {
 	}
 
 	const submitHandler = e => {
-		e.preventDefault()
+		e.preventDefault() //strona nie zostanie ponownie załadowana
 
 		const expenseData = {
 			title1: enteredTitle,
-			amount1: enteredAmount,       // z tego obiektu wyciagamy pary klucz-wartosc w NExpens
+			amount1: enteredAmount, // z tego obiektu wyciagamy pary klucz-wartosc w NExpens
 			date1: new Date(enteredDate),
 		}
 
-		props.onSaveExpenseData(expenseData)//przekazuje do NewExpense i trafia expenseDate jako argument w parametrze enteredExpenseData
+		props.onSaveExpenseData(expenseData) //przekazuje do NewExpense i trafia expenseDate jako argument w parametrze enteredExpenseData
 		setEnteredTitle('')
 		setEnteredAmount('')
 		setEnteredDate('')

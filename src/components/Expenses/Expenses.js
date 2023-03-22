@@ -15,14 +15,19 @@ const Expenses = props => {
 		<div>
 			<Card className='expenses'>
 				<ExpensesFilter selected={filteredYear} onChangeFilter={filterChangeHandler} />
-				<ExpenseItem
+
+				{props.items.map(expense => (
+					<ExpenseItem title={expense.title} amount={expense.amount} date={expense.date} />
+				))}
+
+				{/* <ExpenseItem
 					title={props.items[0].title}
 					amount={props.items[0].amount}
 					datw={props.items[0].dato}></ExpenseItem>
 				<ExpenseItem
 					title={props.items[1].title}
 					amount={props.items[1].amount}
-					datw={props.items[1].date}></ExpenseItem>
+					datw={props.items[1].date}></ExpenseItem>   STATYCZNIE DODANE ,a powyżej za pomocą metody - dynamicznie
 				<ExpenseItem
 					title={props.items[2].title}
 					amount={props.items[2].amount}
@@ -30,7 +35,7 @@ const Expenses = props => {
 				<ExpenseItem
 					title={props.items[3].title}
 					amount={props.items[3].amount}
-					datw={props.items[3].date}></ExpenseItem>
+					datw={props.items[3].date}></ExpenseItem> */}
 			</Card>
 		</div>
 	)
