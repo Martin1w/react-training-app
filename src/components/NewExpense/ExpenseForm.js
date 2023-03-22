@@ -38,9 +38,9 @@ const ExpenseForm = props => {
 		e.preventDefault() //strona nie zostanie ponownie załadowana
 
 		const expenseData = {
-			title1: enteredTitle,
-			amount1: enteredAmount, // z tego obiektu wyciagamy pary klucz-wartosc w NExpens
-			date1: new Date(enteredDate),
+			title: enteredTitle,
+			amount: enteredAmount, // z tego obiektu wyciagamy pary klucz-wartosc w NExpens
+			date: new Date(enteredDate),
 		}
 
 		props.onSaveExpenseData(expenseData) //przekazuje do NewExpense i trafia expenseDate jako argument w parametrze enteredExpenseData
