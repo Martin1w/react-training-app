@@ -17,8 +17,7 @@ const Expenses = props => {
 
 	let expensesContent = <p className='info'>No expenses found</p>
 	if (filteredExpenses.length > 0) {
-		expensesContent =
-			filteredExpenses.length > 0 &&
+		expensesContent = filteredExpenses.length > 0 &&
 			filteredExpenses.map(expense => (
 				<ExpenseItem key={expense.id} title={expense.title} amount={expense.amount} date={expense.date} />
 			))
