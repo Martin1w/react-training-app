@@ -5,3 +5,9 @@
 	width: 50rem;
 	max-width: 95%;
 }
+
+p {
+	padding: 1rem;
+	color: white;
+	font-size: 14px;
+}
