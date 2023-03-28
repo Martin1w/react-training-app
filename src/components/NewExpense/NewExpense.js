@@ -24,7 +24,6 @@ const NewExpense = props => {
 		setIsEditing(false)
 	}
 
-	console.log(!isEditing)
 	return (
 		<div className='new-expense'>
 			{!isEditing && <button onClick={startEditingHandler}>Add New Expenses</button>}
