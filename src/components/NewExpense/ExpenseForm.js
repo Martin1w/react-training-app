@@ -39,7 +39,7 @@ const ExpenseForm = props => {
 
 		const expenseData = {
 			title: enteredTitle,
-			amount: enteredAmount, // z tego obiektu wyciagamy pary klucz-wartosc w NExpens
+			amount: +enteredAmount, // z tego obiektu wyciagamy pary klucz-wartosc w NExpens
 			date: new Date(enteredDate),
 		}
 
@@ -66,7 +66,9 @@ const ExpenseForm = props => {
 				</div>
 			</div>
 			<div className='new-expense__actions'>
-				<button type='button' onClick={props.onCancel}>Cancel</button>
+				<button type='button' onClick={props.onCancel}>
+					Cancel
+				</button>
 				<button type='submit'>Add Expense</button>
 			</div>
 		</form>
